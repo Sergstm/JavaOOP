@@ -8,7 +8,13 @@ import java.util.Scanner;
 public class BooksRunner {
     public static void main(String[] args) throws FileNotFoundException {
 
+        Books books = new Books();
+
         createBooksArray();
+
+        books.searchByAuthor();
+        books.searchByPublisher();
+        books.searchByYear();
 
     }
 
@@ -17,7 +23,7 @@ public class BooksRunner {
                 "IdeaProjects\\JavaOOP\\src\\homework\\lesson2\\blinov3\\data.txt";
         Scanner scanner = new Scanner(new File(filePath));
 
-        Books books = new Books();
+        Books library = new Books();
 
         Book book = new Book();
         book.setTitle(scanner.nextLine());
@@ -27,7 +33,7 @@ public class BooksRunner {
         book.setNumPage(Integer.parseInt(scanner.nextLine()));
         book.setPrice(Double.parseDouble(scanner.nextLine()));
         book.setBindingType(scanner.nextLine());
-        books.addBook(book);
+        library.addBook(book);
         scanner.nextLine();
 
         Book book1 = new Book();
@@ -38,7 +44,7 @@ public class BooksRunner {
         book1.setNumPage(Integer.parseInt(scanner.nextLine()));
         book1.setPrice(Double.parseDouble(scanner.nextLine()));
         book1.setBindingType(scanner.nextLine());
-        books.addBook(book1);
+        library.addBook(book1);
         scanner.nextLine();
 
         Book book2 = new Book();
@@ -49,7 +55,7 @@ public class BooksRunner {
         book2.setNumPage(Integer.parseInt(scanner.nextLine()));
         book2.setPrice(Double.parseDouble(scanner.nextLine()));
         book2.setBindingType(scanner.nextLine());
-        books.addBook(book2);
+        library.addBook(book2);
 
 //        System.out.println(books);
     }

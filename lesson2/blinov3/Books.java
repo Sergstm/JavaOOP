@@ -13,6 +13,21 @@ public class Books {
         booksArray.add(bookExemplar);
     }
 
+    public Books searchByAuthor() {
+        Books books = null;
+        return books;
+    }
+
+    public Books searchByPublisher() {
+        Books books = null;
+        return books;
+    }
+
+    public Books searchByYear() {
+        Books books = null;
+        return books;
+    }
+
     @Override
     public String toString() {
         return booksArray.toString();
