@@ -1,0 +1,23 @@
+Thinking in Java
+Bruce Eckel
+Pearson Education US
+2006
+1520
+41.45
+Paperback
+
+Head First Java
+Kathy Sierra, Bert Bates
+OReilly Media Inc USA
+2005
+688
+28.06
+Paperback
+
+Java: The Complete Reference, Ninth Edition
+Herbert Schildt
+McGraw Hill Education Europe
+2014
+1312
+36.03
+Paperback
