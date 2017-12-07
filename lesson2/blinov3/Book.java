@@ -1,7 +1,5 @@
 package homework.lesson2.blinov3;
 
-import java.time.Year;
-
 public class Book {
 
     public static int nextId = 0;
@@ -10,13 +8,10 @@ public class Book {
     private String title;
     private String authorName;
     private String publisher;
-    private Year year;
+    private int year;
     private int numPage;
     private double price;
     private String bindingType;
-
-    public Book() {
-    }
 
     public int getId() {
         return id;
@@ -46,11 +41,11 @@ public class Book {
         this.publisher = publisher;
     }
 
-    public Year getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(Year year) {
+    public void setYear(int year) {
         this.year = year;
     }
 
@@ -79,24 +74,16 @@ public class Book {
     }
 
     @Override
-    public int hashCode() {
-        return id;
-    }
-
-    @Override
     public String toString() {
         return "\nBook{" +
-                "\nid = " + id +
-                "\ntitle = " + title +
-                "\nauthorName = " + authorName +
-                "\npublisher = " + publisher +
-                "\nyear = " + year +
-                "\nnumPage = " + numPage +
-                "\nprice = " + price +
-                "\nbindingType = " + bindingType +
-                "\n}";
+                "\nid=" + id +
+                "\n, title='" + title + '\'' +
+                "\n, authorName='" + authorName + '\'' +
+                "\n, publisher='" + publisher + '\'' +
+                "\n, year=" + year +
+                "\n, numPage=" + numPage +
+                "\n, price=" + price +
+                "\n, bindingType='" + bindingType + '\'' +
+                '}';
     }
-
-
-
 }

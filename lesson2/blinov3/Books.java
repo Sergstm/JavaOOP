@@ -6,30 +6,44 @@ public class Books {
 
     private ArrayList<Book> booksArray = new ArrayList<>();
 
-    Books() {
-    }
-
     public void addBook(Book bookExemplar) {
         booksArray.add(bookExemplar);
     }
 
-    public Books searchByAuthor() {
-        Books books = null;
-        return books;
+    public Books searchByAuthor(String authorName) {
+        Books results = new Books();
+        for (Book elem : booksArray) {
+            if (elem.getAuthorName().equals(authorName)) {
+                results.addBook(elem);
+            }
+        }
+        return results;
     }
 
-    public Books searchByPublisher() {
-        Books books = null;
-        return books;
+    public Books searchByPublisher(String publisher) {
+        Books results = new Books();
+        for (Book elem : booksArray) {
+            if (elem.getPublisher().equals(publisher)) {
+                results.addBook(elem);
+            }
+        }
+        return results;
     }
 
-    public Books searchByYear() {
-        Books books = null;
-        return books;
+    public Books searchByYear(int year) {
+        Books results = new Books();
+        for (Book elem : booksArray) {
+            if (elem.getYear() >= year) {
+                results.addBook(elem);
+            }
+        }
+        return results;
     }
 
     @Override
     public String toString() {
-        return booksArray.toString();
+        return "Books{" +
+                "booksArray=" + booksArray +
+                '}';
     }
 }
