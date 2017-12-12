@@ -34,6 +34,5 @@ public class CinemaRunner {
         System.out.println("Free seats = " + hallForSession.getFree());
         System.out.println("Purchased seats = " + hallForSession.getPurchased());
         System.out.println("Final fees = $" + movieSession.resultFees());
-
     }
 }
