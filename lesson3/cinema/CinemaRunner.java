@@ -13,6 +13,7 @@ public class CinemaRunner {
         movie.setDuration(161);
         movie.setDescription("Science fiction film");
 
+        //Input
         System.out.print("Enter quantity of tickets: ");
         int purchasedTickets = scanner.nextInt();
 
