@@ -17,8 +17,7 @@ public class PersonRunner {
         people.add(new Person("Kasey", 19));
 
         people.stream()
-                .filter(person -> person.getAge() >= 12)
-                .filter(person -> person.getAge() <= 17)
+                .filter(person -> person.getAge() >= 12 && person.getAge() <= 17)
                 .sorted(new PersonComparator())
                 .forEach(System.out::println);
     }
