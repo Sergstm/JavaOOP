@@ -1,6 +1,7 @@
 package homework.lesson6;
 
 public enum Actors {
+
     SCHWARZENEGGER("Arnold Schwarzenegger"),
     STALLONE("Sylvester Stallone"),
     CARREY("Jim Carrey"),

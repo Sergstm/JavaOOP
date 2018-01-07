@@ -1,6 +1,6 @@
 package homework.lesson6;
 
-public enum
-Genre {
+public enum Genre {
+
     ACTION, COMEDY, SCI_FI;
 }
