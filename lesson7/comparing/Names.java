@@ -32,12 +32,12 @@ public class Names {
     }
 
     public List<String> sortLengthName() {
-        Collections.sort(this.getNames(), new MinComparator());
+        this.getNames().sort(new MinComparator());
         return names;
     }
 
     public List<String> sortGroupName() {
-        Collections.sort(this.getNames(), new LengthComparator());
+        this.getNames().sort(new LengthComparator());
         return names;
     }
 
