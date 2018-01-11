@@ -26,6 +26,7 @@ public class PersonRunner {
                 iterator.remove();
             }
         }
+        
         System.out.println("===========");
         System.out.println("Out list:");
         people.forEach(elem -> System.out.println("Name: " + elem.getName()));
