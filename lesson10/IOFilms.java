@@ -20,7 +20,7 @@ public class IOFilms {
         File file = new File("src/homework/lesson10/data.txt");
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))) {
             bufferedWriter.write(String.valueOf(films));
-            System.out.println("Success");
+            System.out.println("Writing success");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -30,7 +30,7 @@ public class IOFilms {
         File file = new File("src/homework/lesson10/data.txt");
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
             String str = bufferedReader.readLine();
-            System.out.println(str);
+            films.forEach(System.out::println);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -40,7 +40,7 @@ public class IOFilms {
         File file = new File("src/homework/lesson10/data.txt");
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file))) {
             outputStream.writeObject(films);
-            System.out.println("Success");
+            System.out.println("Serialization success");
         } catch (IOException e) {
             e.printStackTrace();
         }
