@@ -3,7 +3,6 @@ package homework.lesson10;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class IOFilms {
 
@@ -19,37 +18,43 @@ public class IOFilms {
 
     public void addToFile() {
         File file = new File("src/homework/lesson10/data.txt");
-        PrintWriter printWriter = null;
-        try {
-            printWriter = new PrintWriter(new FileWriter(file));
-            printWriter.print(films);
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))) {
+            bufferedWriter.write(String.valueOf(films));
             System.out.println("Success");
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            Objects.requireNonNull(printWriter).close();
         }
     }
 
     public void getFromFile() {
         File file = new File("src/homework/lesson10/data.txt");
-
-        BufferedReader bufferedReader = null;
-        try {
-            bufferedReader = new BufferedReader(new FileReader(file));
-            String line = bufferedReader.readLine();
-            System.out.println(line);
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
+            String str = bufferedReader.readLine();
+            System.out.println(str);
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                Objects.requireNonNull(bufferedReader).close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
     }
 
+    public void serializeObj() {
+        File file = new File("src/homework/lesson10/data.txt");
+        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file))) {
+            outputStream.writeObject(films);
+            System.out.println("Success");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deserializeObj() {
+        File file = new File("src/homework/lesson10/data.txt");
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file))) {
+            String str = String.valueOf(inputStream.readObject());
+            System.out.println(str);
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     public String toString() {

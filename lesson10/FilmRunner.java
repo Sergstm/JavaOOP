@@ -12,13 +12,14 @@ public class FilmRunner {
         IOFilms films = new IOFilms();
         films.addFilms(film1);
         films.addFilms(film2);
-//        System.out.println(films);
 
+        //IO
 //        films.addToFile();
-        films.getFromFile();
+//        films.getFromFile();
 
-
-
+        //Binary IO
+//        films.serializeObj();
+//        films.deserializeObj();
     }
 
     private static List<String> matrixActors() {

@@ -1,8 +1,11 @@
 package homework.lesson10;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Film {
+public class Film implements Serializable {
+
+    static final long serialVersionUID = 312;
 
     private String name;
     private int year;
